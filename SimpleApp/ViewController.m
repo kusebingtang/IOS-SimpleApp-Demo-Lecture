@@ -29,6 +29,13 @@
      //让静态文本居于整个视图的中央
      [self.view addSubview:label];
       //将静态文本添加到主视图中
+    
+    
+    UIView* redView = [[UIView alloc]init];
+    redView.backgroundColor = [UIColor redColor];
+    redView.frame = CGRectMake(100,100,100,100);
+    [self.view addSubview:redView];
+
 }
 
 @end
