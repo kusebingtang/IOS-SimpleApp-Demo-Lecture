@@ -13,6 +13,8 @@
 		2E9019E3227155830000FC2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9019E2227155830000FC2B /* Assets.xcassets */; };
 		2E9019E6227155830000FC2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9019E4227155830000FC2B /* LaunchScreen.storyboard */; };
 		2E9019E9227155830000FC2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9019E8227155830000FC2B /* main.m */; };
+		2EB6A1AA22757D45009B733B /* fenshouwanhuiContentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6A1A922757D45009B733B /* fenshouwanhuiContentList.plist */; };
+		2EB6A1AC22769735009B733B /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6A1AB22769735009B733B /* icon.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2E9019E5227155830000FC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9019E7227155830000FC2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9019E8227155830000FC2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EB6A1A922757D45009B733B /* fenshouwanhuiContentList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fenshouwanhuiContentList.plist; sourceTree = "<group>"; };
+		2EB6A1AB22769735009B733B /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		2E9019D8227155810000FC2B /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EB6A1AB22769735009B733B /* icon.bundle */,
 				2E9019D9227155810000FC2B /* AppDelegate.h */,
 				2E9019DA227155810000FC2B /* AppDelegate.m */,
 				2E9019DC227155810000FC2B /* ViewController.h */,
@@ -67,6 +72,7 @@
 				2E9019E4227155830000FC2B /* LaunchScreen.storyboard */,
 				2E9019E7227155830000FC2B /* Info.plist */,
 				2E9019E8227155830000FC2B /* main.m */,
+				2EB6A1A922757D45009B733B /* fenshouwanhuiContentList.plist */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -128,9 +134,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB6A1AC22769735009B733B /* icon.bundle in Resources */,
 				2E9019E6227155830000FC2B /* LaunchScreen.storyboard in Resources */,
 				2E9019E3227155830000FC2B /* Assets.xcassets in Resources */,
 				2E9019E1227155810000FC2B /* Main.storyboard in Resources */,
+				2EB6A1AA22757D45009B733B /* fenshouwanhuiContentList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
