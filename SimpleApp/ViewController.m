@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     
     // Do any additional setup after loading the view, typically from a nib.
     UILabel* label = [[UILabel alloc]init];
@@ -34,7 +35,25 @@
     redView.backgroundColor = [UIColor redColor];
     redView.frame = CGRectMake(100,100,100,100);
     [self.view addSubview:redView];
+    
+    UITapGestureRecognizer* gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureRecognizerPushController)];
+    [redView addGestureRecognizer:(gestureRecognizer)];
 
+}
+
+-(void)gestureRecognizerPushController {
+    UIViewController* viewControllerPush = [[UIViewController alloc] init];
+    viewControllerPush.view.backgroundColor= [UIColor whiteColor];
+    viewControllerPush.navigationItem.title=@"内容";
+    viewControllerPush.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"右导航" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemAction)];
+    
+    [self.navigationController pushViewController:viewControllerPush animated:YES];
+    
+}
+
+-(void)rightBarButtonItemAction
+{
+    NSLog(@"999999888");
 }
 
 @end
