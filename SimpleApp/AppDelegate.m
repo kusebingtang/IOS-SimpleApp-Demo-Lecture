@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -49,6 +49,8 @@
     
     [tabbarController setViewControllers:@[viewController,controller2,controller3,controller4]];
     
+    tabbarController.delegate = self;
+    
     
     UINavigationController* navigationController = [[UINavigationController alloc]initWithRootViewController:tabbarController];
     
@@ -85,5 +87,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    return YES;
+}
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    
+}
 
 @end
