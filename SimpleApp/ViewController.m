@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource>
 
 @end
 
@@ -18,26 +18,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
     // Do any additional setup after loading the view, typically from a nib.
-    UILabel* label = [[UILabel alloc]init];
-    //这一句创建了一个静态文本控件，未指定内容、大小和位置
-    label.text=@"hello world";
-    //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
-    [label sizeToFit];
-    //让静态文本的大小自适应内容
-    label.center =self.view.center;
-    //让静态文本居于整个视图的中央
-    [self.view addSubview:label];
+//    UILabel* label = [[UILabel alloc]init];
+//    //这一句创建了一个静态文本控件，未指定内容、大小和位置
+//    label.text=@"hello world";
+//    //"@"的作用是把一个c风格的字符串"hello world"包装成一个NSString对象
+//    [label sizeToFit];
+//    //让静态文本的大小自适应内容
+//    label.center =self.view.center;
+//    //让静态文本居于整个视图的中央
+//    [self.view addSubview:label];
     //将静态文本添加到主视图中
     
-    UIView* redView = [[UIView alloc]init];
-    redView.backgroundColor = [UIColor redColor];
-    redView.frame = CGRectMake(100,100,100,100);
-    [self.view addSubview:redView];
+//    UIView* redView = [[UIView alloc]init];
+//    redView.backgroundColor = [UIColor redColor];
+//    redView.frame = CGRectMake(100,100,100,100);
+//    [self.view addSubview:redView];
+//
+//    UITapGestureRecognizer* gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureRecognizerPushController)];
+//    [redView addGestureRecognizer:(gestureRecognizer)];
     
-    UITapGestureRecognizer* gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureRecognizerPushController)];
-    [redView addGestureRecognizer:(gestureRecognizer)];
+    UITableView* uiTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    uiTableView.dataSource = self;
+    [self.view addSubview:uiTableView];
 
 }
 
@@ -54,6 +57,28 @@
 -(void)rightBarButtonItemAction
 {
     NSLog(@"999999888");
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    return 30;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellID"];
+    }
+
+    cell.textLabel.text =@"主标题";
+    cell.detailTextLabel.text = @"副标题";
+    cell.imageView.image =[UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    return  cell;
+    
 }
 
 @end
