@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UITableViewDataSource>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -40,6 +40,7 @@
     
     UITableView* uiTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     uiTableView.dataSource = self;
+    uiTableView.delegate = self;
     [self.view addSubview:uiTableView];
 
 }
@@ -74,11 +75,25 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellID"];
     }
 
-    cell.textLabel.text =@"主标题";
+    cell.textLabel.text =[NSString stringWithFormat:@"主标题-%@",@(indexPath.row)];
     cell.detailTextLabel.text = @"副标题";
     cell.imageView.image =[UIImage imageNamed:@"icon.bundle/video@2x.png"];
     return  cell;
     
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController* controller = [[UIViewController alloc]init];
+    controller.view.backgroundColor = [UIColor lightGrayColor];
+    controller.title = [NSString stringWithFormat:@"didSelectRowAtIndexPath-%@",@(indexPath.row)];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end
