@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1FD67C2292E2BF0003B44C /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1FD67B2292E2BF0003B44C /* GTVideoViewController.m */; };
 		2E9019DB227155810000FC2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9019DA227155810000FC2B /* AppDelegate.m */; };
 		2E9019DE227155810000FC2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9019DD227155810000FC2B /* ViewController.m */; };
 		2E9019E1227155810000FC2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9019DF227155810000FC2B /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1FD67A2292E2BF0003B44C /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		2E1FD67B2292E2BF0003B44C /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 		2E9019D6227155810000FC2B /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9019D9227155810000FC2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E9019DA227155810000FC2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				2E9019E4227155830000FC2B /* LaunchScreen.storyboard */,
 				2E9019E7227155830000FC2B /* Info.plist */,
 				2E9019E8227155830000FC2B /* main.m */,
+				2E1FD67A2292E2BF0003B44C /* GTVideoViewController.h */,
+				2E1FD67B2292E2BF0003B44C /* GTVideoViewController.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				2E9019DE227155810000FC2B /* ViewController.m in Sources */,
 				2E9019E9227155830000FC2B /* main.m in Sources */,
 				2E9019DB227155810000FC2B /* AppDelegate.m in Sources */,
+				2E1FD67C2292E2BF0003B44C /* GTVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
